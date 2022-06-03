@@ -1,11 +1,13 @@
 <template>
   <div class="main">
-    <NavBar />
+    <nav-bar/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+
 export default {
   name: "app",
   components: {
@@ -15,8 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;700&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -125,6 +126,7 @@ section {
   display: block;
 }
 body {
+  overflow-x: hidden;
   line-height: 1;
 }
 ol,
@@ -135,7 +137,6 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
 blockquote:after,
 q:before,
 q:after {
@@ -148,7 +149,7 @@ table {
 }
 body {
   font-family: Roboto;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 ul {
   list-style-type: none;
@@ -158,8 +159,8 @@ a {
 }
 
 .main {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 
 .__container {
@@ -167,5 +168,9 @@ a {
   padding: 0px 16px;
   margin: 0 auto;
   max-width: 1300px;
+
+  @media(max-width:1000px) {
+    padding: 0px 0px;
+  }
 }
 </style>
