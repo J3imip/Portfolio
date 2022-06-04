@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav ref="navbar">
     <div class="__container wrapper">
       
       <!-- LOGO -->
@@ -10,14 +10,14 @@
       </div>
 
       <!-- BARS ICON -->
-      <div :class='{"bars": true, "active": mobileNav}' v-show="mobile" @click="toggleMobileNav">
+      <div :class='{"bars": true, "active": mobileNav}' v-show="store.mobile" @click="toggleMobileNav">
         <div class="bar"></div>
       </div>
 
       <!-- MENU -->
       <transition name="menu">
-        <ul v-show="!mobile || mobileNav" class="menu">
-          <li><router-link @click="toggleMobileNav" :to="{}">Головна</router-link></li>
+        <ul v-show="!store.mobile || mobileNav" class="menu">
+          <li><router-link @click="toggleMobileNav" :to="{name: 'home'}">Головна</router-link></li>
           <li class="portfolio">
             
             <router-link @click="toggleMobileNav" :to="{}">Портфоліо</router-link>
@@ -37,7 +37,7 @@
           <li><router-link @click="toggleMobileNav" :to="{}">Відгуки</router-link></li>
           <li><router-link @click="toggleMobileNav" :to="{}">Контакти</router-link></li>
 
-          <li v-show="mobile">
+          <li v-show="store.mobile">
             <a href="https://www.instagram.com/portal_in_nature/" onclick="" target="_blank" rel="noopener noreferrer">
               <fa :icon="[ 'fab', 'instagram' ]" class="instagram"/>
             </a>
@@ -50,41 +50,17 @@
 </template>
 
 <script>
+import { store } from "../store";
 export default {
   data() {
     return {
-      scrolledNav: null,
-      mobile: null,
       mobileNav: null,
-      windowWidth: null,
+      store
     };
-  },
-  created() {
-    window.addEventListener("resize", this.checkScreen);
-    this.checkScreen();
   },
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
-    },
-    updateScroll() {
-      if (this.$route.name != "home") return;
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 50) {
-        this.scrolledNav = true;
-        return;
-      }
-      this.scrolledNav = false;
-    },
-    checkScreen() {
-      this.windowWidth = window.innerWidth;
-      if (this.windowWidth <= 1000) {
-        this.mobile = true;
-        return;
-      }
-      this.mobile = false;
-      this.mobileNav = false;
-      return;
     }
   }
 }
@@ -94,17 +70,20 @@ export default {
 nav {
   background-color: rgb(255, 255, 255);
   position: fixed;
+  top: 0;
   width: 100vw;
+  z-index: 99;
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
-  padding: 12px 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   align-items: center;
   justify-content: space-between;
 
-  @media(max-width:1000px) {
+  @media(max-width:700px) {
     padding: 20px;
   } 
 }
@@ -113,7 +92,7 @@ nav {
   display: flex;
   position: relative;
 
-  @media(max-width:1000px) {
+  @media(max-width:700px) {
     position: fixed;
     flex-direction:column;
     top: 64px;
@@ -132,7 +111,7 @@ nav {
         margin-left: 32.5px;
       }
 
-      @media(max-width:1000px) {
+      @media(max-width:700px) {
         margin-left: 0;
         &:not(:first-child) {
           padding-top: 24px;
@@ -157,7 +136,7 @@ nav {
     &:hover {
       color: #000;
     }
-    @media(max-width:1000px) {
+    @media(max-width:700px) {
       font-size: 130%;
       font-weight: bold;
       color: rgb(63, 63, 63);
@@ -169,7 +148,7 @@ nav {
 .angle {
   color: rgb(90, 90, 90);
   margin-left: 4px;
-  @media(max-width:1000px) {
+  @media(max-width:700px) {
     display: none;
   }
 }
@@ -177,7 +156,7 @@ nav {
 .submenu {
   position: absolute;
   visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 4% 5%;
@@ -185,7 +164,7 @@ nav {
   transform: translateX(-1.2vw) translateY(0vw);
   opacity: 0;
 
-  @media(max-width:1000px) {
+  @media(max-width:700px) {
     visibility: visible;
     opacity:1;
     background-color: transparent;
@@ -219,7 +198,7 @@ nav {
           padding-top: 12px;
         }
 
-        @media(max-width:1000px) {
+        @media(max-width:700px) {
           padding-top: 18px;
         }
       }
@@ -237,7 +216,7 @@ nav {
     max-width: 32.5px;
     height: auto;
 
-    @media(max-width:1000px) {
+    @media(max-width:700px) {
       width: 10vw;
     }
   }

@@ -7,11 +7,33 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import { store } from "./store.js";
 
 export default {
   name: "app",
   components: {
     NavBar
+  },
+  data() {
+    return {
+      mobile: null,
+      windowWidth: null,
+    };
+  },
+  created() {
+    window.addEventListener("resize", this.checkScreen);
+    this.checkScreen();
+  },
+  methods: {
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 700) {
+        store.mobile = true;
+        return;
+      }
+      store.mobile = false;
+      return;
+    }
   }
 }
 </script>
@@ -150,6 +172,12 @@ table {
 body {
   font-family: Roboto;
   letter-spacing: 1px;
+  background-color: #000;
+  background-image: url('@/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: center;
 }
 ul {
   list-style-type: none;
@@ -161,6 +189,7 @@ a {
 .main {
   // display: flex;
   // justify-content: center;
+  overflow-x: hidden;
 }
 
 .__container {
@@ -169,8 +198,8 @@ a {
   margin: 0 auto;
   max-width: 1300px;
 
-  @media(max-width:1000px) {
-    padding: 0px 0px;
+  @media(max-width:700px) {
+    padding: 0px 24px;
   }
 }
 </style>
