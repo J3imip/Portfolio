@@ -2,18 +2,21 @@
   <div class="main">
     <nav-bar/>
     <router-view/>
+    <footer-c/>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
 import { store } from "./store.js";
+import FooterC from "./components/FooterC.vue";
 
 export default {
   name: "app",
   components: {
-    NavBar
-  },
+    NavBar,
+    FooterC
+},
   data() {
     return {
       mobile: null,
