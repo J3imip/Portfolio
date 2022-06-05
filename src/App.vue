@@ -178,6 +178,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position-y: center;
+
+  @media(max-width:700px) {
+    background-image: none;
+  }
 }
 ul {
   list-style-type: none;

@@ -4,7 +4,7 @@
       
       <!-- LOGO -->
       <div class="logo">
-        <router-link :to="{}" onclick="">
+        <router-link :to="{name: 'home'}" onclick="" class="logo-link">
           <img src="@/assets/logo.png" alt="">
         </router-link>
       </div>
@@ -20,22 +20,22 @@
           <li><router-link @click="toggleMobileNav" :to="{name: 'home'}">Головна</router-link></li>
           <li class="portfolio">
             
-            <router-link @click="toggleMobileNav" :to="{}">Портфоліо</router-link>
+            <span class="portfolio-title">Портфоліо</span>
             <fa icon="angle-down" class="angle"/>
             
             <!-- PORTFOLIO SUBMENU -->
             <div class="submenu">
               <ul class="submenu-list">
-                <li><router-link @click="toggleMobileNav" :to="{}" onclick="">Портрет</router-link></li>
-                <li><router-link @click="toggleMobileNav" :to="{}" onclick="">Репортаж</router-link></li>
-                <li><router-link @click="toggleMobileNav" :to="{}" onclick="">Лавсторі</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/portrait'}" onclick="">Портрет</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/reportage'}" onclick="">Репортаж</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/lovestory'}" onclick="">Лавсторі</router-link></li>
               </ul>
             </div>
 
           </li>
-          <li><router-link @click="toggleMobileNav" :to="{}">Послуги</router-link></li>
-          <li><router-link @click="toggleMobileNav" :to="{}">Відгуки</router-link></li>
-          <li><router-link @click="toggleMobileNav" :to="{}">Контакти</router-link></li>
+          <li><router-link @click="toggleMobileNav" :to="{name:'services'}">Послуги</router-link></li>
+          <li><router-link @click="toggleMobileNav" :to="{name:'reviews'}">Відгуки</router-link></li>
+          <li><router-link @click="toggleMobileNav" :to="{name:'contacts'}">Контакти</router-link></li>
 
           <li v-show="store.mobile">
             <a href="https://www.instagram.com/portal_in_nature/" onclick="" target="_blank" rel="noopener noreferrer">
@@ -67,6 +67,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.portfolio-title {
+  cursor: pointer;
+}
+.router-link-active.router-link-exact-active:not(.logo-link) {
+  color:#000;
+  @media(max-width:700px) {
+    border-bottom: 1px solid #000;
+  }
+}
 nav {
   background-color: rgb(255, 255, 255);
   position: fixed;
@@ -127,7 +136,7 @@ nav {
     }
   }
 
-  a, .angle {
+  a, .angle, .portfolio-title {
     font-size: 84%;
     text-transform: uppercase;
     color: rgb(90, 90, 90);
@@ -173,7 +182,7 @@ nav {
     box-shadow: none;
     padding: 24px;
 
-    a {
+    a, .portfolio-title {
       font-weight: normal;
     }
   } 
@@ -203,7 +212,7 @@ nav {
         }
       }
 
-      a {
+      a, .portfolio-title {
         text-transform: capitalize;
       }
     }
@@ -228,6 +237,10 @@ nav {
     visibility: visible;
     transform: translateX(-1.2vw) translateY(0.8vw);
     opacity: 1;
+
+    @media(max-width:700px) {
+      transform: translateX(0) translateY(0);
+    }
   }
 
   &:hover > .angle,

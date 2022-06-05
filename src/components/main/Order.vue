@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { store } from "../store"
+import { store } from "../../store"
 export default {
   data() {
     return {
@@ -47,7 +47,7 @@ export default {
   }
   .title {
     text-transform: uppercase;
-    font-size: 1vw;
+    font-size: 1.1vw;
     margin-bottom: 2vw;
     letter-spacing: normal;
     @media(max-width:700px) {
@@ -57,7 +57,7 @@ export default {
   }
   .about  {
     font-family: 'Forum';
-    font-size: 2.3vw;
+    font-size: 2.6vw;
     text-align: center;
 
     @media(max-width:700px) {
@@ -66,14 +66,14 @@ export default {
     }
   }
   .order {
-    padding: 1.5vw 2vw;
+    padding: 1.5vw 2.5vw;
     border: none;
     border-radius: 50px;
-    background-color: #373737;
+    background-color: #2B2B2B;
     text-transform: uppercase;
     color:#fff;
     letter-spacing: 2px;
-    font-size: 0.9vw;
+    font-size: 1vw;
     margin-top: 2vw;
     transition: all .2s ease;
 

@@ -69,8 +69,8 @@ export default {
   line-height: 1.5;
   letter-spacing: normal;
   justify-content: space-between;
-  padding-bottom: 4%;
-  padding-top: 4%;
+  padding-bottom: 8%;
+  padding-top: 8%;
 
   @media(max-width:700px) {
     padding-top: 36vw;
@@ -80,19 +80,25 @@ export default {
 
 
   .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 4vw;
     h1 {
       color: #000;
       font-family: Forum;
-      font-size: 3vw;
+      font-size: 2.5vw;
       line-height: normal;
       margin-bottom: 0.5vw;
-      margin-right: 2vw;
       white-space: nowrap;
 
       @media(max-width: 1300px) {
-        padding-top: 4%;
+        padding-right: 6vw;
+        font-size: 3vw;
+      }
+
+      @media(max-width:1000px) {
         white-space: normal;
-        font-size: 5vw;
       }
 
       @media(max-width:700px) {
@@ -101,17 +107,17 @@ export default {
       }
     }
     span {
-      font-size: 16px;
+      font-size: 1.1vw;
       @media(max-width: 700px) {
-        font-size: 4vw;
+        font-size: 3vw;
       }
     }
   }
   .about {
-    // width: 64%;
-    font-size: 90%;
+    font-size: 1.1vw;
 
     @media(max-width:700px) {
+      font-size: 3vw;
       margin-top: 4vw;
     }
   }

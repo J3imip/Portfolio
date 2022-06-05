@@ -8,7 +8,28 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: () => import("../views/HomeView.vue"),
-    }
+    },
+    {
+      path: "/portfolio/:page",
+      name: "portfolio",
+      props: true,
+      component: () => import("../views/PortfolioView.vue"),
+    },
+    {
+      path: "/services",
+      name: "services",
+      component: () => import("../views/ServicesView.vue"),
+    },
+    {
+      path: "/reviews",
+      name: "reviews",
+      component: () => import("../views/ReviewsView.vue"),
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      component: () => import("../views/ContactsView.vue"),
+    },
   ],
 });
 
