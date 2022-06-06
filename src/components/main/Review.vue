@@ -7,7 +7,7 @@
           <div class="title">ПРАЙС НА ЗЙОМКУ</div>
           <div class="description">Послуги</div>
           <div class="checkout">
-            <router-link :to="{}">перейти</router-link>
+            <router-link :to="{name: 'services'}">перейти</router-link>
             <fa icon="arrow-right" class="arrow-right"/>
           </div>
         </div>
@@ -15,7 +15,7 @@
           <div class="title">ПРИКЛАДИ ЗЙОМОК</div>
           <div class="description">Портфоліо</div>
           <div class="checkout">
-            <router-link :to="{}">перейти</router-link>
+            <router-link :to="{path: '/portfolio/portrait'}">перейти</router-link>
             <fa icon="arrow-right" class="arrow-right" />
           </div>
         </div>
@@ -23,7 +23,7 @@
           <div class="title">ТЕПЛІ СЛОВА</div>
           <div class="description">Відгуки</div>
           <div class="checkout">
-            <router-link :to="{}">перейти</router-link>
+            <router-link :to="{name: 'reviews'}">перейти</router-link>
             <fa icon="arrow-right" class="arrow-right" />
           </div>
         </div>

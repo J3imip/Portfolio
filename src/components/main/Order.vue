@@ -9,7 +9,7 @@
           Мене надихають сміливі, впевнені в собі люди, 
           які звертаються до мене.
         </div>
-        <router-link :to="{}" class="order">Замовити</router-link>
+        <router-link :to="{name: 'services'}" class="order">Замовити</router-link>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@ export default {
     text-align: center;
 
     @media(max-width:700px) {
-      font-size: 250%;
+      font-size: 150%;
       color:#000;
     }
   }

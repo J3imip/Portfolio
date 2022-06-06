@@ -26,7 +26,7 @@
           <img src="@/assets/main/лавсторі.jpg" alt="">
           <div class="alt">Лавсторі</div>
           <div class="checkout">
-            <router-link :to="{}">Переглянути</router-link>
+            <router-link :to="{path: '/portfolio/lovestory'}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>
@@ -34,7 +34,7 @@
           <img src="@/assets/main/портрет.jpg" alt="">
           <div class="alt">Портрет</div>
           <div class="checkout">
-            <router-link :to="{}">Переглянути</router-link>
+            <router-link :to="{path: '/portfolio/portrait'}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>
@@ -42,7 +42,7 @@
           <img src="@/assets/main/репортаж.jpg" alt="">
           <div class="alt">Репортаж</div>
           <div class="checkout">
-            <router-link :to="{}">Переглянути</router-link>
+            <router-link :to="{path: '/portfolio/reportage'}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>

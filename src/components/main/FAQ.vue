@@ -169,6 +169,7 @@ export default {
     color: #373737;
     font-size: 1vw;
     letter-spacing: -0.5px;
+    line-height: 1.5;
     @media(max-width:700px) {
       font-size: 4vw;
     }
@@ -216,6 +217,7 @@ export default {
     letter-spacing: normal;
     color: #373737;
     padding: 0.5vw 0;
+    line-height: 1.5;
     @media(max-width:700px) {
       font-size: 4vw;
     }
