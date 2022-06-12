@@ -15,7 +15,7 @@
           <div class="title">ПРИКЛАДИ ЗЙОМОК</div>
           <div class="description">Портфоліо</div>
           <div class="checkout">
-            <router-link :to="{path: '/portfolio/portrait'}">перейти</router-link>
+            <router-link :to="{name: 'portfolio', params: {page: 'portrait', data: 'main'}}">перейти</router-link>
             <fa icon="arrow-right" class="arrow-right" />
           </div>
         </div>

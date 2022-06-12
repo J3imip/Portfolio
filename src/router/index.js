@@ -10,7 +10,7 @@ const router = createRouter({
       component: () => import("../views/HomeView.vue"),
     },
     {
-      path: "/portfolio/:page",
+      path: "/portfolio/:page/:data",
       name: "portfolio",
       props: true,
       component: () => import("../views/PortfolioView.vue"),

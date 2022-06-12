@@ -6,7 +6,13 @@
         v-for="(item, num) in currentContent.buttons" 
         :key="num"
         :style="{backgroundImage: `url('${item.photo}')` }"
-        :to="{path: `/porfolio/${page}/${item.title}`}"
+        :to="{
+          name: `portfolio`,
+          params: {
+            page,
+            data: item.title
+          }
+        }"
       >
         {{item.title}}
       </router-link>
@@ -69,13 +75,16 @@ export default {
     $route(to) {
       this.page = to.params.page;
       this.currentContent = this.content[to.params.page];
-      console.log(this.currentContent)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  height: 86vh;
+}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

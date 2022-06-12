@@ -26,9 +26,9 @@
             <!-- PORTFOLIO SUBMENU -->
             <div class="submenu">
               <ul class="submenu-list">
-                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/portrait'}" onclick="">Портрет</router-link></li>
-                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/reportage'}" onclick="">Репортаж</router-link></li>
-                <li><router-link @click="toggleMobileNav" :to="{path:'/portfolio/lovestory'}" onclick="">Лавсторі</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{name:'portfolio', params: {page:'portrait', data: 'main'}}" onclick="">Портрет</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{name:'portfolio', params: {page:'reportage', data: 'main'}}" onclick="">Репортаж</router-link></li>
+                <li><router-link @click="toggleMobileNav" :to="{name:'portfolio', params: {page:'lovestory', data: 'main'}}" onclick="">Лавсторі</router-link></li>
               </ul>
             </div>
 
@@ -221,12 +221,12 @@ nav {
 
 .logo {
   img {
-    width: 2.5vw;
-    max-width: 32.5px;
+    width: 11vw;
+    max-width: 350px;
     height: auto;
 
     @media(max-width:700px) {
-      width: 10vw;
+      width: 40vw;
     }
   }
 }

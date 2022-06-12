@@ -8,25 +8,26 @@
           <span>Я фотограф з Харкова</span>
         </div>
         <div class="about">
-        Більше 5 років займаюсь фотографіей.  
-        Для мене фотографувати — це не робота, а пристрасть. 
-        Фотографую практично у всіх жанрах. 
-        Дуже люблю людей, кожного вважаю унікальним 
-        і прекрасним по своєму, тому намагаюся зробити все, 
-        щоб передати його красу на фотографії. 
-        сновне місце фотозйомки - Харків і його околиці, 
-        але завжди готовий до виїзду з міста. 
-        Чим цікавіша у вас ідея, тим більше шансів, 
-        що ми спрацюємося. Тому пишіть, не соромтеся. 
-        Завжди відкритий до нових знайомств.</div>
-      </div>
+            Більше 5 років займаюсь фотографіей. 
+            Починав свій шлях з макрозйомки навколишньої природи, 
+            тому, іноді, я використовую псевдонім «Portal in nature». 
+            Для мене фотографувати — це не робота, а пристрасть. 
+            Фотографую практично у всіх жанрах. Дуже люблю людей, 
+            кожного вважаю унікальним і прекрасним по своєму, тому 
+            намагаюся зробити все, щоб передати його красу на фотографії. 
+            Основне місце фотозйомки - Харків і його околиці, 
+            але завжди готовий до виїзду з міста. Чим цікавіша у вас ідея, 
+            тим більше шансів, що ми спрацюємося. 
+            Тому пишіть, не соромтеся. Завжди відкритий до нових знайомств.
+          </div>
+        </div>
       
       <div class="portfolio">
         <div class="row">
           <img src="@/assets/main/лавсторі.jpg" alt="">
           <div class="alt">Лавсторі</div>
           <div class="checkout">
-            <router-link :to="{path: '/portfolio/lovestory'}">Переглянути</router-link>
+            <router-link :to="{name: 'portfolio', params: {page: 'lovestory', data: 'main'}}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>
@@ -34,7 +35,7 @@
           <img src="@/assets/main/портрет.jpg" alt="">
           <div class="alt">Портрет</div>
           <div class="checkout">
-            <router-link :to="{path: '/portfolio/portrait'}">Переглянути</router-link>
+            <router-link :to="{name: 'portfolio', params: {page: 'portrait', data: 'main'}}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>
@@ -42,7 +43,7 @@
           <img src="@/assets/main/репортаж.jpg" alt="">
           <div class="alt">Репортаж</div>
           <div class="checkout">
-            <router-link :to="{path: '/portfolio/reportage'}">Переглянути</router-link>
+            <router-link :to="{name: 'portfolio', params: {page: 'reportage', data: 'main'}}">Переглянути</router-link>
             <fa icon="arrow-right"/>  
           </div>
         </div>
