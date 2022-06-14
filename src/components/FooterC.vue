@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="__container">
       <div class="content">
-        <div class="row">Максим Портянченко</div>
+        <div class="row">Maxim Portyanchenko Copyright 2020</div>
         <div class="row">
           <a href="https://www.instagram.com/portal_in_nature/" onclick="" target="_blank" rel="noopener noreferrer">
             <fa :icon="[ 'fab', 'instagram' ]" class="instagram"/>
@@ -29,7 +29,7 @@ export default {
 
   .content {
     font-size: 1vw;
-    color: #373737;
+    color: #b6b6b6;
     font-weight: 300;
     display: flex;
     justify-content: space-between;

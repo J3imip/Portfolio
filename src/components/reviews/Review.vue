@@ -11,7 +11,7 @@
       </div>
       <div class="review">{{content.review}}</div>
       <div class="checkout">
-        <a href="#" onclick="">Дивитися</a>
+        <router-link :to="{name: 'portfolio', params: {page: content.page, data: content.data}}">Дивитися</router-link>
         <fa icon="arrow-right"/>
       </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="row">
       <div class="review">{{content.review}}</div>
       <div class="checkout">
-        <a href="#" onclick="">Дивитися</a>
+        <router-link :to="{name: 'portfolio', params: {page: content.page, data: content.data}}">Дивитися</router-link>
         <fa icon="arrow-right"/>
       </div>
     </div>

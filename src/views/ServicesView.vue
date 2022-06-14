@@ -95,7 +95,7 @@ export default {
     font-family: 'Forum';
     font-size: 2.5vw;
     margin-right: 4vw;
-    width: 50%;
+    width: 36%;
     @media(max-width:700px) {
       font-size: 280%;
       width: 100%;
@@ -104,6 +104,7 @@ export default {
 
   .description {
     font-size: 1vw;
+    width: 60%;
     @media(max-width:700px) {
       font-size: 95%;
       margin-top: 10vw;

@@ -1,12 +1,12 @@
 <template>
   <div class="modal">
-    <div class="container">
+    <div class="container" v-click-outside="toggleModal">
       <div class="col">
         <div class="title" v-show="!store.mobile">Ваш відгук</div>
         <input type="text" placeholder="Ваше ім'я" class="name">
         <input type="text" placeholder="Посилання на вашу сторінку в соціальній мережі" class="social">
         <textarea type="text" rows="7" placeholder="Ваш відгук" class="review"/>
-        <a href="#" class="send" @click="reloadPage">відправити</a>
+        <a href="#" class="send" @click="toggleModal()">відправити</a>
       </div>
       <div class="col">
         <div class="photo">
@@ -21,11 +21,19 @@
 
 <script>
 import { store } from "../../store";
+import vClickOutside from 'click-outside-vue3';
+
 export default {
   data() {
     return {
       store
     }
+  },
+  props: {
+    toggleModal: Function
+  },
+  directives: {
+    clickOutside: vClickOutside.directive
   },
   methods: {
     reloadPage() {
@@ -55,6 +63,7 @@ export default {
   justify-content: center;
 
   .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
