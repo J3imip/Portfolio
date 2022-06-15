@@ -113,13 +113,13 @@ export default {
     },
     incPreview() {
       if(this.current<this.maxPhotos) {
-        this.preview = `/src/assets/portfolio/${this.page}/${this.dataParam}/${this.current + 1}.JPG`;
+        this.preview = `/src/assets/portfolio/${this.page}/${this.dataParam}/${parseInt(this.current) + 1}.JPG`;
         this.current++;
       }
     },
     decPreview() {
       if(this.current>1) {
-        this.preview = `/src/assets/portfolio/${this.page}/${this.dataParam}/${this.current - 1}.JPG`;
+        this.preview = `/src/assets/portfolio/${this.page}/${this.dataParam}/${parseInt(this.current) - 1}.JPG`;
         this.current--;
       }
     },
