@@ -5,7 +5,7 @@
 
       <div class="comment">
         <button
-          @click="toggleModal()"
+          @click="toggleModal"
         >Залишити відгук</button>
       </div>
 

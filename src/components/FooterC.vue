@@ -36,7 +36,7 @@ export default {
     align-items: center;
 
     @media(max-width:700px) {
-      font-size: 6vw; 
+      font-size: 3vw; 
     }
 
     svg {

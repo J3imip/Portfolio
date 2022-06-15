@@ -1,11 +1,18 @@
 <template>
-  <div class="wrapper">
+  <div 
+    class="wrapper"
+    :style="{
+      height: current ? `60vh` : `86vh`
+    }"
+  >
     <div class="content">
       <router-link 
         class="photo-session" 
         v-for="(item, num) in currentContent.buttons" 
         :key="num"
-        :style="{backgroundImage: `url('${item.photo}')` }"
+        :style="{
+          backgroundImage: `url('${item.photo}')`,
+        }"
         :to="{
           name: `portfolio`,
           params: {
@@ -13,6 +20,7 @@
             data: item.title
           }
         }"
+        v-show="current!=item.title"
       >
         {{item.title}}
       </router-link>
@@ -67,6 +75,9 @@ export default {
       }
     }
   },
+  props: {
+    current: String
+  },
   mounted() {
     this.page = this.$route.params.page;
     this.currentContent = this.content[this.$route.params.page];
@@ -81,10 +92,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  height: 86vh;
-}
-
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -106,6 +113,10 @@ export default {
     background-position-x: 50%;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     transition: all .5s ease;
+
+    @media(max-width:700px) {
+      height: 30vh;
+    }
 
     &:hover {
       box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);

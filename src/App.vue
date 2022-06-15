@@ -3,6 +3,7 @@
     <nav-bar/>
     <router-view/>
     <footer-c/>
+    <scroll-button/>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import NavBar from "@/components/NavBar.vue";
 import { store } from "./store.js";
 import FooterC from "./components/FooterC.vue";
+import ScrollButton from "./components/ScrollButton.vue";
 
 export default {
   name: "app",
   components: {
     NavBar,
-    FooterC
+    FooterC,
+    ScrollButton
 },
   data() {
     return {
