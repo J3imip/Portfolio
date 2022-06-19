@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="__container">
       <div class="content">
-        <div class="row">Maxim Portyanchenko Copyright 2020</div>
+        <div class="row">Maxim Portyanchenko Copyright 2022</div>
         <div class="row">
           <a href="https://www.instagram.com/portal_in_nature/" onclick="" target="_blank" rel="noopener noreferrer">
             <fa :icon="[ 'fab', 'instagram' ]" class="instagram"/>

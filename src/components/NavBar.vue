@@ -100,6 +100,7 @@ nav {
 .menu{
   display: flex;
   position: relative;
+  margin-right: 0.3vw;
 
   @media(max-width:700px) {
     position: fixed;
@@ -111,6 +112,7 @@ nav {
     height: 100vh;
     background-color: #fff;
     overflow: scroll;
+    margin-right: 0;
   } 
 
   li:not(.submenu-list li) {
