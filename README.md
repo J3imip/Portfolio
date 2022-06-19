@@ -1,4 +1,4 @@
-[Imgur](https://imgur.com/RLDiFsD) **Maxim Portyanchenko** 
+**Maxim Portyanchenko** 
 To run this website you must download [node js](https://nodejs.org/uk/) runtime and [python](https://www.python.org/downloads/) desirable (or build tools)
 
  1. Download windows release from [releases page](https://github.com/J3imip/Portfolio/releases)
