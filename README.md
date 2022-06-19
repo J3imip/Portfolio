@@ -1,35 +1,7 @@
-# portfolio
+![logo](https://imgur.com/RLDiFsD) **Maxim Portyanchenko** 
+To run this website you must download [node js](https://nodejs.org/uk/) runtime and [python](https://www.python.org/downloads/) desirable (or build tools)
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+ 1. Download windows release from [releases page](https://github.com/J3imip/Portfolio/releases)
+ 2. Unarchive website somewhere
+ 3. Run [start.bat](npm%20i%20&&%20npm%20run%20serve) file
+ 4. You're welcome :)
